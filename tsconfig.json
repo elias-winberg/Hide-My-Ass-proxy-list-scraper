@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "outDir": "lib",
+        "sourceMap": true,
+        "sourceRoot": "src",
+        "target": "es5"
+    }
+}

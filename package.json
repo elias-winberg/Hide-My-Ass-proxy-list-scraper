@@ -1,0 +1,26 @@
+{
+  "author": "Elias Winberg <elias-winberg@outlook.com> (https://github.com/elias-winberg/)",
+  "description": "Scrapes the Hide My Ass! proxy list",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "juice": "^4.0.2",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "tslint": "^4.5.1",
+    "typescript": "^2.2.2"
+  },
+  "files": [
+    "lib/"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "hma-proxy-list-scraper",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint src/**/*.ts",
+    "prebuild": "npm run lint",
+    "prepublish": "npm run build"
+  },
+  "version": "0.0.1"
+}
