@@ -1,6 +1,23 @@
 # Hide My Ass! proxy list scraper
 A Node.js library for scraping the Hide My Ass! proxy list
 
+## Example
+
+```js
+"use strict";
+
+const {
+    getProxies
+} = require("hma-proxy-list-scraper");
+
+getProxies(1, (error, proxies) => {
+    if (error) {
+        throw error;
+    }
+    console.dir(proxies);
+});
+```
+
 ## Functions
 
 <dl>
