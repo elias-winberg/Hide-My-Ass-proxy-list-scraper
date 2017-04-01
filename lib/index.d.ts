@@ -48,9 +48,16 @@ export interface IProxy {
     type: string;
 }
 /**
+ * Callback for [getProxies]{@link getProxies}.
+ * @export
+ * @callback GetProxiesCallback
+ * @param {Error} [error] - the error, if any
+ * @param {IProxy[]} [proxies] - the proxies
+ */
+/**
  * Scrapes the specified page for proxies.
  * @export
  * @param {number} pageNumber - the page to scrape
- * @param {(error?: Error, proxies?: IProxy[]) => void} callback - the callback
+ * @param {GetProxiesCallback} callback - the callback
  */
 export declare function getProxies(pageNumber: number, callback: (error?: Error, proxies?: IProxy[]) => void): void;

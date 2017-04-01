@@ -60,8 +60,8 @@ const TR_SELECTOR = "#listable > tbody > tr";
 
 /**
  * Returns the anonymity level of the proxy.
- * @param {any} row - the table row - the table row
- * @param {any} $ - the DOM - the DOM
+ * @param {any} row - the table row
+ * @param {any} $ - the DOM
  * @returns {string} the anonymity level
  */
 function getAnonymityLevel(row, $): string {
@@ -141,10 +141,18 @@ function getType(row, $): string {
 }
 
 /**
+ * Callback for [getProxies]{@link getProxies}.
+ * @export
+ * @callback GetProxiesCallback
+ * @param {Error} [error] - the error, if any
+ * @param {IProxy[]} [proxies] - the proxies
+ */
+
+/**
  * Scrapes the specified page for proxies.
  * @export
  * @param {number} pageNumber - the page to scrape
- * @param {(error?: Error, proxies?: IProxy[]) => void} callback - the callback
+ * @param {GetProxiesCallback} callback - the callback
  */
 export function getProxies(pageNumber: number, callback: (error?: Error, proxies?: IProxy[]) => void) {
     get(BASE_URL + pageNumber, (error, response, body) => {
